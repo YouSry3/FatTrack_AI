@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>النتيجة</title>
+</head>
+<body>
+  <h1>ادخل بياناتك</h1>
+  <form method="POST" action="/predict">
+      <label>weight(kg):</label>
+      <input type="text" name="weight"><br>
+      <label>height (cm):</label>
+      <input type="text" name="height"><br>
+      <input type="submit" value="predict fat percentage">
+  </form>
+    <h1></h1>
+    <p>Predict percentage Fat in your Body {{ fat }}%</p>
+</body>
+</html>
