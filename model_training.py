@@ -2,14 +2,14 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 import joblib
 
-# تحميل الداتا
+# Load Data Set that Download from Kalgge
 df = pd.read_csv("bodyfat.csv")
 
-# تحديد المدخلات والمخرجات
+# Select Features and Target Variable
 X = df[["Weight", "Height"]]
 y = df["BodyFat"]
 
-# تدريب الموديل
+# Tranning Model by Linear Regression
 model = LinearRegression()
 model.fit(X, y)
 
