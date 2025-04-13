@@ -30,7 +30,7 @@ After submitting their data, users get a **visual summary** of their body compos
 
 ## ✨ Features
 
-- 📝 **Text-based input**: Users enter their data (weight, waist, height, etc.) through a clean form.
+- 📝 **Text-based input**: Users enter their data (weight, height, Age, etc.) through a clean form.
 - 📊 **Dynamic dashboard**: Visualize progress with charts and summaries.
 - 🤖 **AI-Powered advice**: Receive smart suggestions tailored to your metrics.
 - 🎨 **Modern UI**: Built with Tailwind CSS & JavaScript.
@@ -45,8 +45,7 @@ After submitting their data, users get a **visual summary** of their body compos
 |-----------------|----------------------------------|
 | Frontend        | HTML, JavaScript, Tailwind CSS   |
 | Backend         | Python, Flask                    |
-| Database (optional) | SQLite or Firebase               |
-| Deployment      | Docker, GitHub Actions (optional) |
+| Deployment      | GitHub Actions (optional) |
 
 ------
 
