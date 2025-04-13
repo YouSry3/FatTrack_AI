@@ -11,7 +11,7 @@ This image shows the **simple and clean form** where users can input key body me
 ## 📊 Example: Progress Dashboard  
 After submitting their data, users get a **visual summary** of their body composition analysis, including charts and trends over time. The dashboard helps users track progress and stay motivated.
 
-<img src="https://github.com/mohamedsherif301/FatTrack_AI/blob/main/Images/ResultFatBady.png" width="500"/>
+<img src="https://github.com/mohamedsherif301/FatTrack_AI/blob/main/Images/ResultFatBady.png?raw=true" width="500"/>
 
 
 **FatTrack_AI** is an intelligent body composition tracker that helps users monitor their body fat percentage over time using AI-driven analysis — all through simple **text input forms**. No images required!
