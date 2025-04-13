@@ -10,22 +10,38 @@ model = joblib.load("model.pkl")
 @app.route('/')
 def home():
     return render_template("index.html")
+
 @app.route('/predict', methods=['POST'])
 def predict():
-    # Get user input (in kg and cm)
-    weight = float(request.form['weight'])  # kg
-    height = float(request.form['height'])  # cm
+    try:
+        # الحصول على المدخلات من المستخدم (الوزن والطول والعمر)
+        weight = float(request.form['weight'])  # kg
+        height = float(request.form['height'])  # cm
+        age = int(request.form['age'])  # Years
 
-    # Convert to lbs and inches
-    weight_lbs = weight * 2.20462
-    height_inches = height * 0.393701
+        # التحقق من أن المدخلات صحيحة (قيم موجبة)
+        if weight <= 0 or height <= 0 or age <= 0:
+            return render_template("result.html", fat="Invalid input. Please enter positive values.")
 
-    # Predict fat percentage
-    prediction = model.predict(np.array([[weight_lbs, height_inches]]))
-    fat_percent = round(prediction[0], 2)
+        # تحويل الوزن والطول إلى الوحدات المطلوبة
+        weight_lbs = weight * 2.20462
+        height_inches = height * 0.393701
 
-    return render_template("result.html", fat=fat_percent)
+        # إجراء التنبؤ
+        prediction = model.predict(np.array([[weight_lbs, height_inches, age]]))
+        fat_percent = round(prediction[0], 2)
 
+        # التحقق من أن نسبة الدهون في الجسم معقولة (بين 0 و 100)
+        if fat_percent < 0:
+            fat_percent = 0
+        elif fat_percent > 100:
+            fat_percent = 100
+
+        # عرض النتيجة
+        return render_template("index.html", fat=fat_percent)
+
+    except ValueError:
+        return render_template("result.html", fat="Please enter valid numeric values.")
 
 if __name__ == '__main__':
     app.run(debug=True)
