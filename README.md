@@ -1,6 +1,5 @@
-# Let's save the final README content into a .md file for the user to download.
 
-readme_content = """# 🧠 FatTrack_AI
+# 🧠 Body Fat Track AI
 
 ## 🧾 Example: Input Form for Body Metrics  
 This image shows the **simple and clean form** where users can input key body metrics like weight, height, and waist size. The system uses this structured data to generate analysis and predictions.
