@@ -48,7 +48,7 @@ After submitting their data, users get a **visual summary** of their body compos
 | Database (optional) | SQLite or Firebase               |
 | Deployment      | Docker, GitHub Actions (optional) |
 
----
+------
 
 ## 📥 Installation & Run Instructions
 
@@ -57,24 +57,37 @@ After submitting their data, users get a **visual summary** of their body compos
 ```bash
 git clone https://github.com/mohamedsherif301/FatTrack_AI.git
 cd FatTrack_AI
+```
+
 ### 📦 Step 2: (Optional but recommended) Create a virtual environment
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows use: venv\\Scripts\\activate
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
+
 ### 🔧 Step 3: Install all required dependencies
 
 ```bash
 pip install -r requirements.txt
+```
+
 ### ▶️ Step 4: Run the application
 
 ```bash
 python app.py
-###🌐 Step 5: Open the app in your browser
+```
 
+### 🌐 Step 5: Open the app in your browser
 
-```bash
+Go to:
+
+```
 http://127.0.0.1:5000/
+```
+
+---
+
 
 
 
