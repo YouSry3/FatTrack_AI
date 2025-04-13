@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const fatPercentage = parseFloat(document.querySelector('.percentage').textContent);
   
-  // تحديد لون الفئة
+  // Determine the category based on the fat percentage
   let category, color;
   if (fatPercentage < 6) {
       category = "Essential Fat";
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
       color = '#e74a3b';
   }
 
-  // إنشاء المخطط
+  // Render the doughnut chart
   const ctx = document.getElementById('fatChart').getContext('2d');
   new Chart(ctx, {
       type: 'doughnut',
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 
-  // عرض معلومات الفئات
+  // ٌRender category information
   const categoriesInfo = document.getElementById('categoriesInfo');
   categoriesInfo.innerHTML = `
       <h3>Body Fat Categories</h3>

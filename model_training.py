@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 import joblib
 
-# تحميل البيانات
+#  Download the dataset from the UCI Machine Learning Repository
 df = pd.read_csv('bodyfat.csv')
 
 
