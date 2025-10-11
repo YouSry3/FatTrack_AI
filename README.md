@@ -1,5 +1,6 @@
 
 # 🧠 Body Fat Track AI
+## 7
 
 ## 🧾 Example: Input Form for Body Metrics  
 This image shows the **simple and clean form** where users can input key body metrics like weight, height, and waist size. The system uses this structured data to generate analysis and predictions.
